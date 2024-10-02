@@ -228,7 +228,9 @@ void    ImGui_ImplWin32_Shutdown()
     IM_DELETE(bd);
 }
 
-static bool ImGui_ImplWin32_UpdateMouseCursor()
+// mmalek reeve 02.10.2024 Changed availability of ImGui_ImplWin32_UpdateMouseCursor function, so it's reachable from other modules
+bool ImGui_ImplWin32_UpdateMouseCursor()
+// mmalek reeve 02.10.2024 END
 {
     ImGuiIO& io = ImGui::GetIO();
     if (io.ConfigFlags & ImGuiConfigFlags_NoMouseCursorChange)
